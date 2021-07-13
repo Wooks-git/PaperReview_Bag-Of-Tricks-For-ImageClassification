@@ -29,4 +29,5 @@ Batch size가 증가하면 수렴률이 감소하는 문제가 발생할 수 있
 ### Low precision training
 
 <img src = 'https://user-images.githubusercontent.com/77375223/125418981-dd4e3fe2-00bd-40c9-8076-55c98fa795a9.png'>
-CNN 연산을 할 때 보통 32-bit floating point를 사용합니다.
+CNN 연산을 할 때 보통 32-bit floating point를 사용합니다. floating point란 부동 소수점의 표현 방식을 말하는데, bit 숫자가 클 수록 표현할 수 있는 소수점의 범위가 넓어진다는 것으로 생각하면 편리하다. 즉 CNN연산에서 보편적으로 사용하는 FP32 방식을 사용하지 말고, FP16을 사용하면 학습 속도는 2~3배 가량 빨라질 수 있고, FP32에 비해 성능의 차이가 크지않고, 해당 논문에선 오히려 성능이 소폭 상승했다고 서술했습니다.
+
