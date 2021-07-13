@@ -18,4 +18,15 @@
 # Method
 
 ### Efficient Training
-저자는 Efficient Training이라는 기법을 통해 성능을 향상시킬 수 있다고 주장합니다. 본 논문에서 제시하는 Efficient Training이란 Large Batch Training + low-precision을 모두 사용하는 것을 Efficient Training이라고 설명하고 있습니다.
+저자는 Efficient Training이라는 기법을 통해 성능을 향상시킬 수 있다고 주장합니다. 본 논문에서 제시하는 Efficient Training이란 Large Batch Training + Low-Precision Training을 모두 사용하는 것을 Efficient Training이라고 설명하고 있습니다.
+
+### Large Batch Training
+<img src = 'https://user-images.githubusercontent.com/77375223/125417698-a3584099-4575-49e3-a376-e33e69d1100a.JPG'>
+
+Batch size가 증가하면 수렴률이 감소하는 문제가 발생할 수 있다. 따라서 해당 문제를 Learning Rate를 선형적으로 증가 시킴으로써 해결 할 수 있다고 주장합니다.<br>
+본 논문에선 1e-1 * batch size/256 으로 설정하여 진행했습니다.
+
+### Low precision training
+
+<img src = 'https://user-images.githubusercontent.com/77375223/125418981-dd4e3fe2-00bd-40c9-8076-55c98fa795a9.png'>
+CNN 연산을 할 때 보통 32-bit floating point를 사용합니다.
