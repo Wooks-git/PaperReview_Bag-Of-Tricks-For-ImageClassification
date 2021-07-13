@@ -15,9 +15,7 @@
 ④ forward연산을 통해 가중치를 정하고 loss를 구한다. <br>
 ⑤ backward연산을 통해 기울기를 구하고 기울기에 맞게 가중치를 업데이트 한다. <br>
 
+# Method
 
 ### Efficient Training
-저자는 Efficient Training이라는 기법을 통해 성능을 향상시킬 수 있다고 주장합니다.
-
-
-
+저자는 Efficient Training이라는 기법을 통해 성능을 향상시킬 수 있다고 주장합니다. 본 논문에서 제시하는 Efficient Training이란 Large Batch Training + low-precision을 모두 사용하는 것을 Efficient Training이라고 설명하고 있습니다.
